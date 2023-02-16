@@ -39,4 +39,11 @@ export class RoutesController {
   remove(@Param('id') id: string) {
     return this.routesService.remove(+id);
   }
+
+  @Get(':id/start')
+  startRoute(@Param('id') id: string) {
+    console.log(id);
+
+    // enviar mensagem pro Kafka
+  }
 }
